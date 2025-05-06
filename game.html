@@ -2,11 +2,45 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Игра арбитражника</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      width: 60px;
+      height: 60px;
+      margin: 5px;
+      font-size: 24px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      canvas {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+  <div class="controls">
+    <button class="btn" onclick="setDirection('up')">↑</button><br />
+    <button class="btn" onclick="setDirection('left')">←</button>
+    <button class="btn" onclick="setDirection('down')">↓</button>
+    <button class="btn" onclick="setDirection('right')">→</button>
+  </div>
+
   <script src="game.js"></script>
 </body>
 </html>

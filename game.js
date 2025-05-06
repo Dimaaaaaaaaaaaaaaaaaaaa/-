@@ -91,3 +91,17 @@ document.addEventListener("keydown", function (e) {
 });
 
 let gameLoop = setInterval(updateGame, speed);
+function setDirection(dir) {
+  if (dir === "up" && velocity.y === 0) {
+    velocity = { x: 0, y: -1 };
+  }
+  if (dir === "down" && velocity.y === 0) {
+    velocity = { x: 0, y: 1 };
+  }
+  if (dir === "left" && velocity.x === 0) {
+    velocity = { x: -1, y: 0 };
+  }
+  if (dir === "right" && velocity.x === 0) {
+    velocity = { x: 1, y: 0 };
+  }
+}
