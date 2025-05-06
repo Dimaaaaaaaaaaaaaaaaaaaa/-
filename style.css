@@ -1,0 +1,29 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    height: 100%;
+  }
+  
+  .main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    cursor: pointer;
+  }
+  
+  .center-text {
+    font-size: 36px;
+    text-align: center;
+    user-select: none;
+  }
+  
+  canvas {
+    display: block;
+    margin: 0 auto;
+    background: #222;
+    border: 2px solid white;
+  }
